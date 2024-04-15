@@ -1,0 +1,42 @@
+{
+  "name": "incidences_report",
+  "version": "0.1.1",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.3.4",
+    "@types/node": "20.6.2",
+    "@types/react": "18.2.22",
+    "@types/react-dom": "18.2.7",
+    "autoprefixer": "10.4.15",
+    "axios": "^1.6.8",
+    "chartjs": "^0.3.24",
+    "dotenv": "^16.4.5",
+    "eslint": "8.49.0",
+    "eslint-config-next": "13.5.1",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.3.0",
+    "next": "13.5.1",
+    "postcss": "8.4.30",
+    "react": "18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.51.2",
+    "react-hook-form-resolvers": "^0.0.1",
+    "react-icons": "^5.0.1",
+    "swr": "^2.2.5",
+    "tailwindcss": "3.3.3",
+    "tailwindcss-animatecss": "^3.0.5",
+    "typescript": "5.2.2",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "tailwindcss-animate": "^1.0.7"
+  }
+}

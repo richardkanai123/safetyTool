@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a.active,
+a.visited {
+  color: aqua;
+}
+label {
+  margin-bottom: 0.25rem;
+}
