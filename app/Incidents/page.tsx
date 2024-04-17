@@ -9,9 +9,6 @@ const FetchVerifiedReports = async () => {
 	const res = await fetch(url + "/incidences", {
 		cache: "reload",
 	});
-	if (res.status != 200) {
-		throw new Error("No data found");
-	}
 	const data: Incident[] = await res.json();
 	return data;
 };
