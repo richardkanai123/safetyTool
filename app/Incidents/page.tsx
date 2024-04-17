@@ -19,7 +19,8 @@ const FetchVerifiedReports = async () => {
 export default async function IncidentsPage() {
 	const data = await FetchVerifiedReports();
 
-		if (data) {
+		if (!data) return <h1>No data found</h1>;
+	if (data)
 		return (
 			<>
 				<div className='text-main w-full px-2 flex flex-col  md:flex-row md:flex-wrap  justify-center gap-4 py-6'>
@@ -32,7 +33,4 @@ export default async function IncidentsPage() {
 				</div>
 			</>
 		);
-	} else return <h1>No data Found</h1>;
-}
-
 }
