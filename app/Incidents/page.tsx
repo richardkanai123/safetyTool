@@ -10,7 +10,7 @@ const FetchVerifiedReports = async () => {
     // This will activate the closest `error.js` Error Boundary
     throw new Error('Failed to fetch data')
   }
-	const data: Incident[] = await res.json();
+	const data = await res.json();
 	return data;
 };
 
