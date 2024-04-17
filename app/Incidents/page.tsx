@@ -9,6 +9,11 @@ const FetchVerifiedReports = async () => {
 	const res = await fetch(url + "/incidences", {
 		cache: "reload",
 	});
+	
+	 if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error('Failed to fetch data')
+  }
 	const data: Incident[] = await res.json();
 	return data;
 };
