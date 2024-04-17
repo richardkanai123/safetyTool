@@ -27,7 +27,12 @@ export default async function IncidentsPage() {
 		return (
 			
 				<div className='text-main w-full px-2 flex flex-col  md:flex-row md:flex-wrap  justify-center gap-4 py-6'>
-					<p>Data was found</p>
+					{data?.map((incident) => (
+						<IncidentCard
+							key={incident._id}
+							Item={incident}
+						/>
+					))}
 				</div>
 			
 		);
