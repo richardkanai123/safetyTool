@@ -7,7 +7,7 @@ const FetchVerifiedReports = async () => {
 		throw new Error("Could not Link to database");
 	}
 	const res = await fetch(url + "/incidences", {
-		cache: "reload",
+		cache: "no-cache",
 	});
 	
 	 if (!res.ok) {
