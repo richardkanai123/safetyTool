@@ -2,7 +2,11 @@ import { Incident } from "@/Libs/Types";
 import IncidentCard from "../_Components/IncidentCard";
 
 const FetchVerifiedReports = async () => {
-	const res = await fetch("https://jsonplaceholder.typicode.com/todos", {
+	const url: string | undefined = process.env.BASEAPIURL;
+	if (url === "" || url === undefined) {
+		throw new Error("Could not Link to database");
+	}
+	const res = await fetch(url + "/incidences", {
 		cache: "reload",
 	});
 	
@@ -10,7 +14,7 @@ const FetchVerifiedReports = async () => {
     // This will activate the closest `error.js` Error Boundary
     throw new Error('Failed to fetch data')
   }
-	const data = await res.json();
+	const data: Incident[] = await res.json();
 	return data;
 };
 
